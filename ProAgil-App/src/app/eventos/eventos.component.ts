@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "app-eventos",
@@ -8,6 +9,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class EventosComponent implements OnInit {
   eventos: any;
+  faCoffee = faCoffee;
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -15,9 +17,10 @@ export class EventosComponent implements OnInit {
   }
 
   getEventos() {
-    this.http.get("http://localhost:5000/evento").subscribe(
+    this.http.get("http://localhost:5000/api/evento").subscribe(
       response => {
         this.eventos = response;
+        console.log(this.eventos);
       },
       error => {
         console.log(error);

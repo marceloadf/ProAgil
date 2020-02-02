@@ -1,11 +1,11 @@
 <p>Próximos Eventos:</p>
 
 <div *ngFor="let item of eventos">
-  Evento: {{ item.EventoId }}<br />
-  Local: {{ item.Local }}<br />
-  Data: {{ item.Data }}<br />
-  Tema: {{ item.Tema }}<br />
-  Quantidade de Pessoas: {{ item.QtdPessoas }}<br />
-  Lote: {{ item.Lote }}<br />
+  <fa-icon [icon]="faCoffee"></fa-icon> Evento: {{ item.eventoId }}<br />
+  Local: {{ item.local }}<br />
+  Data: {{ item.dataEvento }}<br />
+  Tema: {{ item.tema }}<br />
+  Quantidade de Pessoas: {{ item.qtdPessoas }}<br />
+  Lote: {{ item.lote }}<br />
   <hr />
 </div>
