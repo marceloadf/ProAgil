@@ -6,9 +6,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { EventosComponent } from "./eventos/eventos.component";
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
-  declarations: [AppComponent, EventosComponent],
+  declarations: [AppComponent, EventosComponent, NavComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
