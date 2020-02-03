@@ -8,7 +8,7 @@ import { faCoffee } from "@fortawesome/free-solid-svg-icons";
   styleUrls: ["./eventos.component.css"]
 })
 export class EventosComponent implements OnInit {
-  eventos: any;
+  eventos: any = [];
   faCoffee = faCoffee;
   constructor(private http: HttpClient) {}
 
@@ -21,6 +21,7 @@ export class EventosComponent implements OnInit {
       response => {
         this.eventos = response;
         console.log(this.eventos);
+        console.log(this.eventos.length);
       },
       error => {
         console.log(error);
