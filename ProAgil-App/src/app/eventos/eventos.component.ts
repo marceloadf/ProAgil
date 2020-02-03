@@ -10,10 +10,17 @@ import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 export class EventosComponent implements OnInit {
   eventos: any = [];
   faCoffee = faCoffee;
+  imagemLargura = 50;
+  imagemMargem = 2;
+  showImage = false;
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.getEventos();
+  }
+
+  mostrarImagem() {
+    this.showImage = !this.showImage;
   }
 
   getEventos() {

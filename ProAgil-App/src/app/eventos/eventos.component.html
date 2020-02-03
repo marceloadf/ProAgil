@@ -1,14 +1,19 @@
 <form action="" class="form-inline">
   <div class="form-group mb-2">
     <input type="text" class="form-contro mr-2" placeholder="Digite..." />
-    <button class="btn btn-outline-dark">
+    <button type="button" class="btn btn-outline-dark">
       buscar
     </button>
   </div>
 </form>
 <table class="table table-striped">
-  <thead class="thead-dark">
+  <thead class="thead-light">
     <tr>
+      <th>
+        <button type="button" class="btn-primary" (click)="mostrarImagem()">
+          Mostrar Imagem
+        </button>
+      </th>
       <th>#</th>
       <th>Tema</th>
       <th>Local</th>
@@ -20,6 +25,14 @@
   </thead>
   <tbody *ngIf="eventos && eventos.length">
     <tr *ngFor="let evento of eventos">
+      <td>
+        <img
+          *ngIf="showImage"
+          [style.width.px]="imagemLargura"
+          [style.margin.px]="imagemMargem"
+          src="http://localhost:5000/img/{{ evento.imagemURL }}"
+        />
+      </td>
       <td>{{ evento.eventoId }}</td>
       <td>{{ evento.tema }}</td>
       <td>{{ evento.local }}</td>

@@ -4,6 +4,8 @@
 bin
 obj
 ProAgil.db
+ProAgil.db-shm
+ProAgil.db-wal
 
 # compiled output
 /dist
@@ -49,3 +51,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+ProAgil.WebAPI/ProAgil.db-wal
